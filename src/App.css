@@ -1,9 +1,12 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  max-width: 90%;
+  margin: auto;
+  font-family: Segoe UI;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 5vmin;
   pointer-events: none;
 }
 
@@ -11,21 +14,6 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
@@ -36,3 +24,27 @@
     transform: rotate(360deg);
   }
 }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.links {
+  width: 30%;
+  font-family: 'Consolas';
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  padding: 1em;
+}
+
