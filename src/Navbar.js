@@ -1,4 +1,5 @@
 import logo from './signature2.png';
+import {Link} from 'react-router-dom';
 
 const Navbar = () => {
     return ( 
@@ -9,9 +10,9 @@ const Navbar = () => {
             </div>
             
             <div className="links">
-                <a href="/">Home</a>
-                <a href="/create">New Blog</a>
-                <a href="/about">About</a>
+                <Link to="/">Home</Link>
+                <Link to="/create">New Blog</Link>
+                <Link to="/about">About</Link>
             </div>
         </nav>
      );

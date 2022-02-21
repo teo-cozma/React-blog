@@ -1,5 +1,6 @@
+/* Styles applied on separate pages */
+
 .App {
-  /* text-align: center; */
   max-width: 90%;
   margin: auto;
   font-family: Segoe UI;
@@ -35,16 +36,64 @@
   align-items: center;
 }
 .links {
-  width: 30%;
+  width: 15em;
   font-family: 'Consolas';
   display: flex;
   justify-content: space-between;
 }
+.links a {
+  text-decoration: none;
+  color: #003366;
+}
+p {
+  color: #003366;
+  font-size: 14px;
+}
 
+.blog-details a {
+  color: #003366;
+  font-size: 25px;
+}
+h4, h3 {
+  color: #007d8c;
+}
 .content {
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   padding: 1em;
 }
+.home {
+  width: 100%;
+}
+.blog-section {
+  border-radius: 1em;
+  padding: 1em;
+  width: 100%;
+  box-shadow: 5px 15px 25px #888888;
+}
 
+.blog-preview {
+  border-bottom: 1px solid #003366;
+  margin-bottom: 2em;
+}
+
+.create {
+  width:80%;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 8em auto;
+  /* grid-template-columns: repeat(2, minmax(0, 1fr)); */
+  grid-gap: 1em;
+}
+form > input, textarea {
+  padding: 0.5em;
+  border: 1px solid #007d8c;
+  border-radius: 0.5em;
+}
+
+form > button {
+  border: 1px solid #007d8c;
+  color: #007d8c;
+}
