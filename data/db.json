@@ -19,13 +19,16 @@
       "id": 3
     },
     {
-      "id": 4
+      "title": "Title 2",
+      "author": "Me",
+      "body": "More content.",
+      "id": 8
     },
     {
-      "id": 5
-    },
-    {
-      "id": 6
+      "title": "Working with React is cool!",
+      "author": "Me",
+      "body": "There may be many challenges ahead. One certainly can't figure out everything in one shot or in one project. Just keep on practicing !",
+      "id": 9
     }
   ]
 }

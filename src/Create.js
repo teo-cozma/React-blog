@@ -1,22 +1,28 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+// useHistory is replaced by useNavigate
 
 const Create = () => {
     const [title, setTitle] = useState('');
     const [author, setAuthor] = useState('');
     const [body, setBody] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
+    const history = useNavigate();
 
     // Handling the form to create a new blog
     const handleSubmit = (e) => {
         e.preventDefault();
         const blog = { title, author, body };
-        console.log(blog);
-        // fetch('http://localhost:8000/blogs', {
-        //     method: 'POST',
-        //     header: { "Content-Type" : "application/json"},
-        //     body: JSON.stringify(blog)
-        // }).then(() => {
-        //     console.log(blog);
-        // })
+        // console.log(blog);
+        fetch('http://localhost:8000/blogs', {
+            method: 'POST',
+            headers: { "Content-Type" : "application/json"},
+            body: JSON.stringify(blog)
+        }).then(() => {
+            console.log(blog);
+            setIsLoading(false);
+            history('/');
+        })
     }
 
     return ( 
@@ -46,7 +52,8 @@ const Create = () => {
                     onChange={(e) => setBody(e.target.value)}
                 ></textarea>
 
-                <button>Add blog</button>
+                {!isLoading && <button>Add blog</button>}
+                {isLoading && <button diabled>Adding...</button>}
             </form>
         </div>
      );

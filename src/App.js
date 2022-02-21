@@ -6,6 +6,7 @@ import Create from './Create';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import BlogDetails from './BlogDetails';
 import About from './About';
+import NotFound from './NotFound';
 
 // !!! Switch has been replaced with Routes
 
@@ -25,6 +26,8 @@ function App() {
             <Route path="/about" element={<About/>} />
             {/* Render Individual blog */}
             <Route path="/blogs/:id" element={<BlogDetails/>} />
+            {/* Render 404 page */}
+            <Route path="*" element={<NotFound/>} />
           </Routes>
         </div>
     </div>
