@@ -28,11 +28,13 @@ const BlogDetails = () => {
                     <h3> {blog.title} </h3>
                     <p> Written by {blog.author} </p>
                     <div> {blog.body} </div>
+                    
                     <button onClick={handleClick}>Delete</button>
+                    <Link to={'/blogs/:id/update'}>Update</Link>
                 </article>
             )}
         </div>
-     );
+    );
 }
  
 export default BlogDetails;
